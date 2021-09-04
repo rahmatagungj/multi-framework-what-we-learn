@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Submits;
 use Illuminate\Http\Request;
+use Response;
 
 class SubmitController extends Controller
 {
@@ -39,6 +40,7 @@ class SubmitController extends Controller
     public function store(Request $request)
     {
         //
+        return response()->json([$request->all()]);
     }
 
     /**
