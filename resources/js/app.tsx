@@ -1,7 +1,9 @@
 
 import React from "react";
 import { render } from "react-dom";
-import Index from "./pages/Index";
+import Trend from "./components/Trend";
 
 
-render(<Index />, document.getElementById("homepage"));
+if (document.getElementById('trend')) {
+    render(<Trend />, document.getElementById("trend"));
+}
