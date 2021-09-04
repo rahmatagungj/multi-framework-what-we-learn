@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\SubmitController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,4 @@ use App\Http\Controllers\HomePageController;
 */
 
 Route::get('/', [HomePageController::class,'index']);
+Route::get('submit', [SubmitController::class,'index']);
