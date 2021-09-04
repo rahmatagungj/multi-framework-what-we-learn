@@ -36,7 +36,7 @@ const Trend = () => {
                         </p>
                     </div>
 
-                    <div className="row mt-60">
+                    <div className="row mt-4">
                         {isLoading && (
                             <div
                                 className="spinner-border d-flex flex-row m-auto my-3"
@@ -53,7 +53,7 @@ const Trend = () => {
                                     className="col-md-4 col-sm-12 col-12"
                                     key={idx}
                                 >
-                                    <div className="rounded p-2 border border-1">
+                                    <div className="rounded p-3 border border-1">
                                         <div>
                                             <h4 className="text-black text-opacity-75">
                                                 {trend.name}

@@ -2278,7 +2278,7 @@ var Trend = function Trend() {
   return react_1["default"].createElement("div", null, react_1["default"].createElement("div", {
     className: "trend py-3"
   }, react_1["default"].createElement("div", null, react_1["default"].createElement("div", null, react_1["default"].createElement("h3", null, "Trending Now"), react_1["default"].createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor", react_1["default"].createElement("br", null), "incididunt ut labore et dolore magna aliqua.")), react_1["default"].createElement("div", {
-    className: "row mt-60"
+    className: "row mt-4"
   }, isLoading && react_1["default"].createElement("div", {
     className: "spinner-border d-flex flex-row m-auto my-3",
     role: "status"
@@ -2289,7 +2289,7 @@ var Trend = function Trend() {
       className: "col-md-4 col-sm-12 col-12",
       key: idx
     }, react_1["default"].createElement("div", {
-      className: "rounded p-2 border border-1"
+      className: "rounded p-3 border border-1"
     }, react_1["default"].createElement("div", null, react_1["default"].createElement("h4", {
       className: "text-black text-opacity-75"
     }, trend.name), react_1["default"].createElement("p", {

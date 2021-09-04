@@ -17,7 +17,9 @@
                         blanditiis neque iure debitis! Explicabo sunt, laudantium, unde minus dicta, est eum consequatur
                         dolore laboriosam accusamus fugit animi ut.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" class="btn btn-info bg-red btn-lg rounded-1 px-4 me-md-2">Submit</button>
+                        <a href="submit" class="btn btn-info bg-red btn-lg rounded-1 px-4 me-md-2">
+                            Submit
+                        </a>
                     </div>
                 </div>
             </div>
