@@ -4,7 +4,7 @@
 
 @section('content')
     @include('layouts.navigation')
-    <main class="container">
+    <main class="container mb-5">
         <form action="submit/add" method="post">
             @csrf
             <div class="form-group my-2">
@@ -17,7 +17,7 @@
             </div>
             <div class="form-group my-2">
                 <label for="description">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Put description here ..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary my-2">Submit</button>
         </form>

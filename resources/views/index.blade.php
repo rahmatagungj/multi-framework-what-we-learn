@@ -4,7 +4,7 @@
 
 @section('content')
     @include('layouts.navigation')
-    <main class="container">
+    <main class="container mb-5">
         <div class="col-xxl-8">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-3">
                 <div class="col-10 col-sm-8 col-lg-6">
