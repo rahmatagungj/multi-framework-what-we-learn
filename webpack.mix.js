@@ -12,12 +12,9 @@ const mix = require("laravel-mix");
 
 mix.disableNotifications();
 
-mix.js("resources/js/app.js", "public/js").postCss(
-    "resources/css/app.css",
-    "public/css",
-    [
-        //
-    ]
-);
+mix.js("resources/js/app.js", "public/js")
+   .postCss("resources/css/app.css", "public/css", [
+     require("tailwindcss"),
+]);
 
 mix.ts("resources/js/app.tsx", "public/js").react();

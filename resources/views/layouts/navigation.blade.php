@@ -1,28 +1,32 @@
 @php
 $NAVIGATIONS = [
     [
-        'name' => 'Submit',
-        'url' => 'submit',
+        'name' => 'Help',
+        'url' => 'help',
     ],
 ];
 @endphp
 
 
-<nav class="navbar navbar-expand-lg navbar-light p-3">
-    <div class="container">
-        <a class="navbar-brand text-uppercase fw-bolder text-black text-opacity-75" href="/">What We Learn</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                @foreach ($NAVIGATIONS as $nav)
-                    <li class="nav-item">
-                        <a class="nav-link {{$title === $nav['name'] ? 'active' : '' }}" aria-current="page" href="{{ $nav['url'] }}">{{ $nav['name'] }}</a>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
+<header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/">
+            <span class="ml-3 text-xl uppercase">What We Learn</span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            @foreach ($NAVIGATIONS as $nav)
+                <a class="mr-5 hover:text-gray-900 {{ $title === $nav['name'] ? 'active' : '' }}" aria-current="page"
+                    href="{{ $nav['url'] }}">{{ $nav['name'] }}</a>
+            @endforeach
+        </nav>
+        <a href="submit">
+            <button
+                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Submit
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </a>
     </div>
-</nav>
+</header>

@@ -2070,6 +2070,79 @@ if (document.getElementById('trend')) {
 
 /***/ }),
 
+/***/ "./resources/js/components/LoadingSpinner.tsx":
+/*!****************************************************!*\
+  !*** ./resources/js/components/LoadingSpinner.tsx ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function LoadingSpinner() {
+  return React.createElement("svg", {
+    className: "animate-spin h-5 w-5 text-gray-900 dark:text-gray-100",
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24"
+  }, React.createElement("circle", {
+    className: "opacity-25",
+    cx: "12",
+    cy: "12",
+    r: "10",
+    stroke: "currentColor",
+    strokeWidth: "4"
+  }), React.createElement("path", {
+    className: "opacity-75",
+    fill: "currentColor",
+    d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+  }));
+}
+
+exports["default"] = LoadingSpinner;
+
+/***/ }),
+
 /***/ "./resources/js/components/Trend.tsx":
 /*!*******************************************!*\
   !*** ./resources/js/components/Trend.tsx ***!
@@ -2234,6 +2307,8 @@ Object.defineProperty(exports, "__esModule", ({
 
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
+var LoadingSpinner_1 = __importDefault(__webpack_require__(/*! ./LoadingSpinner */ "./resources/js/components/LoadingSpinner.tsx"));
+
 var Trend = function Trend() {
   var _a = react_1["default"].useState(true),
       isLoading = _a[0],
@@ -2262,7 +2337,6 @@ var Trend = function Trend() {
           case 2:
             data = _a.sent();
             setTrends(data);
-            console.log(data);
             setIsLoading(false);
             return [2
             /*return*/
@@ -2277,25 +2351,36 @@ var Trend = function Trend() {
   }, []);
   return react_1["default"].createElement("div", null, react_1["default"].createElement("div", {
     className: "trend py-3"
-  }, react_1["default"].createElement("div", null, react_1["default"].createElement("div", null, react_1["default"].createElement("h3", null, "Trending Now"), react_1["default"].createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor", react_1["default"].createElement("br", null), "incididunt ut labore et dolore magna aliqua.")), react_1["default"].createElement("div", {
-    className: "row mt-4"
+  }, react_1["default"].createElement("div", null, react_1["default"].createElement("section", {
+    className: "text-gray-600 body-font"
+  }, react_1["default"].createElement("div", {
+    className: "container px-5 mx-auto"
+  }, react_1["default"].createElement("div", {
+    className: "flex flex-col text-center w-full mb-20"
+  }, react_1["default"].createElement("h1", {
+    className: "sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
+  }, "Trending Now"), react_1["default"].createElement("p", {
+    className: "lg:w-2/3 mx-auto leading-relaxed text-base"
+  }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor", react_1["default"].createElement("br", null), "incididunt ut labore et dolore magna aliqua.")), react_1["default"].createElement("div", {
+    className: "flex flex-wrap -m-2"
   }, isLoading && react_1["default"].createElement("div", {
-    className: "spinner-border d-flex flex-row m-auto my-3",
-    role: "status"
+    className: "flex flex-col m-auto py-3"
   }, react_1["default"].createElement("span", {
-    className: "visually-hidden"
-  }, "Loading...")), !isLoading && trends.map(function (trend, idx) {
+    className: "sr-only"
+  }, "Loading..."), react_1["default"].createElement(LoadingSpinner_1["default"], null)), !isLoading && trends.map(function (trend, idx) {
     return react_1["default"].createElement("div", {
-      className: "col-md-4 col-sm-12 col-12",
+      className: "p-2 lg:w-1/3 md:w-1/2 w-full",
       key: idx
     }, react_1["default"].createElement("div", {
-      className: "rounded p-3 border border-1"
-    }, react_1["default"].createElement("div", null, react_1["default"].createElement("h4", {
-      className: "text-black text-opacity-75"
+      className: "h-full flex items-center border-gray-200 border p-4 rounded-lg"
+    }, react_1["default"].createElement("div", {
+      className: "flex-grow"
+    }, react_1["default"].createElement("h2", {
+      className: "text-gray-900 title-font font-medium"
     }, trend.name), react_1["default"].createElement("p", {
-      className: "text-black text-opacity-50"
+      className: "text-gray-500"
     }, trend.description))));
-  })))));
+  })))))));
 };
 
 exports["default"] = Trend;
