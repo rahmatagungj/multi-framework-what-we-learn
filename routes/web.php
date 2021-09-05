@@ -17,3 +17,6 @@ use App\Http\Controllers\SubmitController;
 
 Route::get('/', [HomePageController::class,'index']);
 Route::resource('submit', SubmitController::class);
+Route::get('/help', fn() => view('help',[
+    'title'=>'Help'
+]));
