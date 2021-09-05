@@ -16,7 +16,7 @@
             <section class="my-2 md:my-10 bg-white p-10 rounded-lg flex-1 md:mr-3">
                 <h4 class="text-xl font-semibold mb-5">{{ $title }} Resource</h4>
                 <div class="border-b border-gray-200 mb-5"></div>
-                <form action="{{ route('submit_add') }}" method="post">
+                <form action="{{ route('submit.store') }}" method="post">
                     @csrf
                     <div class="form-group">
                         <label class="text-gray-700 dark:text-gray-200" for="name">Name</label>

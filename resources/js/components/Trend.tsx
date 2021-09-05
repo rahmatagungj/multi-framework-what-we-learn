@@ -27,7 +27,7 @@ const Trend = () => {
             <div className="trend py-3">
                 <div>
                     <section className="text-gray-600 body-font">
-                        <div className="container px-5 mx-auto">
+                        <div className="container px-3 mx-auto">
                             <div className="flex flex-col text-center w-full mb-20">
                                 <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
                                     Trending Now

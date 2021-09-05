@@ -16,6 +16,4 @@ use App\Http\Controllers\SubmitController;
 */
 
 Route::get('/', [HomePageController::class,'index']);
-Route::get('submit', [SubmitController::class,'index']);
-Route::get('submit/add', [SubmitController::class,'index']);
-Route::post('submit/add', [SubmitController::class,'store'])->name('submit_add');
+Route::resource('submit', SubmitController::class);

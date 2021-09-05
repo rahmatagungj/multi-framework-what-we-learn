@@ -2354,7 +2354,7 @@ var Trend = function Trend() {
   }, react_1["default"].createElement("div", null, react_1["default"].createElement("section", {
     className: "text-gray-600 body-font"
   }, react_1["default"].createElement("div", {
-    className: "container px-5 mx-auto"
+    className: "container px-3 mx-auto"
   }, react_1["default"].createElement("div", {
     className: "flex flex-col text-center w-full mb-20"
   }, react_1["default"].createElement("h1", {
